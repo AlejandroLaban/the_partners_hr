@@ -30,14 +30,14 @@
         %>
 
         <tr>
-            <td><%=String.valueOf(job.getJob_id())%></td>
-            <td><%=job.getJob_title()%></td>
-            <td><%=job.getMin_salary()%></td>
-            <td><%=job.getMax_salary()%></td>
+            <td><%=String.valueOf(job.getJobId())%></td>
+            <td><%=job.getJobTitle()%></td>
+            <td><%=job.getMinSalary()%></td>
+            <td><%=job.getMaxSalary()%></td>
             <td style="border: none;">
                 <div>
                     <form method="post" action="jobUpdate.jsp">
-                        <input type="hidden" id="updateId" name="updateId" value="<%=String.valueOf(job.getJob_id())%>"/>
+                        <input type="hidden" id="updateId" name="updateId" value="<%=String.valueOf(job.getJobId())%>"/>
                         <input type="submit" value="Modify..."/>
                     </form>
                 </div>
@@ -45,7 +45,7 @@
             <td style="border: none;">
                 <div>
                     <form method="post" action="DeleteJob">
-                        <input type="hidden" id="delId" name="delId" value="<%=String.valueOf(job.getJob_id())%>"/>
+                        <input type="hidden" id="delId" name="delId" value="<%=String.valueOf(job.getJobId())%>"/>
                         <input type="submit" value="Delete"/>
                     </form>
                 </div>

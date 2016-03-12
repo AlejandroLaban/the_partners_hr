@@ -17,10 +17,10 @@
     <div id="mystyle" style="border: none;">
         <h1>JAVA</h1>
         <p><br/>
-            <b>Modelo HR tabla Jobs</b><br/>
+            <b>Model HR - table Jobs</b><br/>
                 <%=new Date()%>  </br>
-            <a href="jobAdd.jsp">Añadir jobs</a><br>
-            <a href="jobView.jsp">Ver jobs</a>
+            <a href="jobAdd.jsp">Add jobs</a><br>
+            <a href="jobView.jsp">View jobs</a>
         </p>
     </div>
 </body>

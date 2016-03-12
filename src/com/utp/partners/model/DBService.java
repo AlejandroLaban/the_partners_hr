@@ -18,7 +18,6 @@ public class DBService {
     public Connection getConnection() throws NamingException, SQLException {
         InitialContext ctx = new InitialContext();
         DataSource ds = (DataSource) ctx.lookup("jdbc/hr");
-        //Statement stmt = connection.createStatement();
         Connection connection = ds.getConnection();
         return connection;
     }
@@ -29,10 +28,10 @@ public class DBService {
         try {
             con=this.getConnection();
             pstmt = con.prepareStatement("INSERT INTO jobs(job_id,job_title,min_salary,max_salary) VALUES(?,?,?,?)");
-            pstmt.setString(1, job.getJob_id());
-            pstmt.setString(2, job.getJob_title());
-            pstmt.setInt(3, job.getMin_salary());
-            pstmt.setInt(4, job.getMax_salary());
+            pstmt.setString(1, job.getJobId());
+            pstmt.setString(2, job.getJobTitle());
+            pstmt.setInt(3, job.getMinSalary());
+            pstmt.setInt(4, job.getMaxSalary());
             pstmt.execute();
         } catch (SQLException | NamingException ex) {
 
@@ -57,7 +56,7 @@ public class DBService {
 
             stmt =con.prepareStatement("DELETE FROM jobs WHERE job_id=?");
             stmt.setString(1,id);
-            stmt.executeQuery();
+            stmt.executeUpdate();
         } catch (SQLException | NamingException ex) {
 
         } finally {
@@ -79,10 +78,10 @@ public class DBService {
         try {
             con=this.getConnection();
             pstmt = con.prepareStatement("UPDATE jobs SET job_title=?, min_salary=?, max_salary=? WHERE job_id=?");
-            pstmt.setString(1, job.getJob_title());
-            pstmt.setInt(2, job.getMin_salary());
-            pstmt.setInt(3, job.getMax_salary());
-            pstmt.setString(4, job.getJob_id());
+            pstmt.setString(1, job.getJobTitle());
+            pstmt.setInt(2, job.getMinSalary());
+            pstmt.setInt(3, job.getMaxSalary());
+            pstmt.setString(4, job.getJobId());
             pstmt.executeUpdate();
         } catch (SQLException | NamingException ex) {
 
@@ -110,10 +109,10 @@ public class DBService {
             ResultSet rs=stmt.executeQuery();
             if (rs.next()) {
                 jobs = new Job();
-                jobs.setJob_id(rs.getString(1));
-                jobs.setJob_title(rs.getString(2));
-                jobs.setMin_salary(rs.getInt(3));
-                jobs.setMax_salary(rs.getInt(4));
+                jobs.setJobId(rs.getString(1));
+                jobs.setJobTitle(rs.getString(2));
+                jobs.setMinSalary(rs.getInt(3));
+                jobs.setMaxSalary(rs.getInt(4));
             }
         } catch (SQLException | NamingException ex) {
 
@@ -142,10 +141,10 @@ public class DBService {
             ResultSet rs = stmt.executeQuery("SELECT * FROM jobs ORDER BY job_id");
             while (rs.next()) {
                 Job job = new Job();
-                job.setJob_id(rs.getString(1));
-                job.setJob_title(rs.getString(2));
-                job.setMin_salary(rs.getInt(3));
-                job.setMax_salary(rs.getInt(4));
+                job.setJobId(rs.getString(1));
+                job.setJobTitle(rs.getString(2));
+                job.setMinSalary(rs.getInt(3));
+                job.setMaxSalary(rs.getInt(4));
                 list.add(job);
             }
         } catch (SQLException  | NamingException ex) {

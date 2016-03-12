@@ -20,14 +20,14 @@
         <form id="form" name="form" action="AddJob" method="post">
             <h1>Job</h1>
             <p>To add new Job enter following information</p>
-            <label>Job ID<span class="small">Enter Job ID</span></label>
-            <input type="text" name="job_id" id="job_id" />
-            <label>Name<span class="small">Enter title</span></label>
-            <input type="text" name="job_title" id="job_title" />
-            <label>Phone<span class="small">Enter min salary</span></label>
-            <input type="text" name="min_salary" id="min_salary" />
-            <label>Email<span class="small">Enter max salary</span></label>
-            <input type="text" name="max_salary" id="max_salary" />
+            <label>Enter Job ID</label>
+            <input type="text" name="jobId" id="jobId" />
+            <label>Enter title</label>
+            <input type="text" name="jobTitle" id="jobTitle" />
+            <label>Enter min salary</label>
+            <input type="text" name="minSalary" id="minSalary" />
+            <label>Enter max salary</label>
+            <input type="text" name="maxSalary" id="maxSalary" />
             <button type="submit">Add New Job</button>
             <div class="spacer"></div>
         </form>

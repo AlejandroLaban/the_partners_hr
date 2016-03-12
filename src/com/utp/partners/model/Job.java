@@ -8,43 +8,43 @@ public class Job {
     public Job() {
     }
 
-    private String job_id;
+    private String jobId;
 
-    private String job_title;
+    private String jobTitle;
 
-    private int min_salary;
+    private int minSalary;
 
-    private int max_salary;
+    private int maxSalary;
 
-    public String getJob_id() {
-        return job_id;
+    public String getJobId() {
+        return jobId;
     }
 
-    public void setJob_id(String job_id) {
-        this.job_id = job_id;
+    public void setJobId(String jobId) {
+        this.jobId = jobId;
     }
 
-    public String getJob_title() {
-        return job_title;
+    public String getJobTitle() {
+        return jobTitle;
     }
 
-    public void setJob_title(String job_title) {
-        this.job_title = job_title;
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
     }
 
-    public int getMin_salary() {
-        return min_salary;
+    public int getMinSalary() {
+        return minSalary;
     }
 
-    public void setMin_salary(int min_salary) {
-        this.min_salary = min_salary;
+    public void setMinSalary(int minSalary) {
+        this.minSalary = minSalary;
     }
 
-    public int getMax_salary() {
-        return max_salary;
+    public int getMaxSalary() {
+        return maxSalary;
     }
 
-    public void setMax_salary(int max_salary) {
-        this.max_salary = max_salary;
+    public void setMaxSalary(int maxSalary) {
+        this.maxSalary = maxSalary;
     }
 }

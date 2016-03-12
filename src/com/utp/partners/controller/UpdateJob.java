@@ -20,10 +20,10 @@ import java.io.IOException;
         protected void processRequest(HttpServletRequest request, HttpServletResponse response)
                 throws ServletException, IOException {
             Job job = new Job();
-            job.setJob_id((request.getParameter("job_id")));
-            job.setJob_title(request.getParameter("job_title"));
-            job.setMin_salary(Integer.parseInt(request.getParameter("min_salary")));
-            job.setMax_salary(Integer.parseInt(request.getParameter("max_salary")));
+            job.setJobId((request.getParameter("jobId")));
+            job.setJobTitle(request.getParameter("jobTitle"));
+            job.setMinSalary(Integer.parseInt(request.getParameter("minSalary")));
+            job.setMaxSalary(Integer.parseInt(request.getParameter("maxSalary")));
             DBService serv = new DBService();
             serv.update(job);
             response.sendRedirect("jobView.jsp");
